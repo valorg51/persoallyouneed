@@ -30,4 +30,89 @@ class ProgressBar {
             </div>
             <div class="progress-steps" aria-hidden="true">
                 ${this.steps.map((step, index) => `
-                    <span
+                    <span 
+                        class="progress-step ${index + 1 === this.currentStep ? 'active' : ''}" 
+                        id="${step.id}"
+                    >
+                        ${step.label}
+                    </span>
+                `).join('')}
+            </div>
+        `;
+        
+        this.element.innerHTML = template;
+    }
+    
+    /**
+     * Update the progress indicator based on current step
+     */
+    updateProgress() {
+        // Calculate progress percentage
+        const progressPercentage = (this.currentStep / this.totalSteps) * 100;
+        
+        // Update progress fill width
+        const progressFill = document.getElementById('progress-fill');
+        if (progressFill) {
+            progressFill.style.width = `${progressPercentage}%`;
+        }
+        
+        // Update step indicators
+        this.steps.forEach((step, index) => {
+            const stepElement = document.getElementById(step.id);
+            if (stepElement) {
+                if (index + 1 === this.currentStep) {
+                    stepElement.classList.add('active');
+                } else {
+                    stepElement.classList.remove('active');
+                }
+            }
+        });
+        
+        // Update ARIA attributes
+        const progressBar = this.element.querySelector('.progress-bar');
+        if (progressBar) {
+            progressBar.setAttribute('aria-valuenow', this.currentStep);
+        }
+    }
+    
+    /**
+     * Set the current active step
+     * @param {number} step - Step number (1-based)
+     */
+    setCurrentStep(step) {
+        if (step >= 1 && step <= this.totalSteps) {
+            this.currentStep = step;
+            this.updateProgress();
+            
+            // Publish event for other components
+            EventBus.publish('progressChanged', { step: this.currentStep });
+        }
+    }
+    
+    /**
+     * Move to the next step
+     * @returns {boolean} Whether the step changed
+     */
+    nextStep() {
+        if (this.currentStep < this.totalSteps) {
+            this.setCurrentStep(this.currentStep + 1);
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * Move to the previous step
+     * @returns {boolean} Whether the step changed
+     */
+    prevStep() {
+        if (this.currentStep > 1) {
+            this.setCurrentStep(this.currentStep - 1);
+            return true;
+        }
+        return false;
+    }
+}
+
+// Export the component
+window.ProgressBar = ProgressBar;
