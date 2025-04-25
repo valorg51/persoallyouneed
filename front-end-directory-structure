@@ -1,0 +1,62 @@
+project-root/
+├── frontend/
+│   ├── assets/
+│   │   ├── css/
+│   │   │   ├── components/
+│   │   │   │   ├── search-form.css
+│   │   │   │   ├── progress-bar.css
+│   │   │   │   ├── live-chat.css
+│   │   │   │   └── suggestion-tags.css
+│   │   │   ├── layout/
+│   │   │   │   ├── header.css
+│   │   │   │   ├── footer.css
+│   │   │   │   └── main.css
+│   │   │   ├── utils/
+│   │   │   │   ├── animations.css
+│   │   │   │   ├── variables.css
+│   │   │   │   └── responsive.css
+│   │   │   └── main.css
+│   │   ├── js/
+│   │   │   ├── components/
+│   │   │   │   ├── SearchForm.js
+│   │   │   │   ├── ProgressBar.js
+│   │   │   │   ├── LiveChat.js
+│   │   │   │   └── SuggestionTags.js
+│   │   │   ├── services/
+│   │   │   │   ├── ApiService.js
+│   │   │   │   ├── ValidationService.js
+│   │   │   │   └── AuthService.js
+│   │   │   ├── utils/
+│   │   │   │   ├── EventBus.js
+│   │   │   │   └── FormValidator.js
+│   │   │   └── main.js
+│   │   └── images/
+│   ├── components/
+│   │   ├── search-form.html
+│   │   ├── progress-bar.html
+│   │   ├── live-chat.html
+│   │   └── suggestion-tags.html
+│   └── index.html
+├── backend/
+│   ├── api/
+│   │   ├── routes/
+│   │   │   ├── experts.js
+│   │   │   ├── bookings.js
+│   │   │   └── auth.js
+│   │   ├── controllers/
+│   │   │   ├── ExpertController.js
+│   │   │   ├── BookingController.js
+│   │   │   └── AuthController.js
+│   │   ├── models/
+│   │   │   ├── Expert.js
+│   │   │   ├── Booking.js
+│   │   │   └── User.js
+│   │   ├── middleware/
+│   │   │   ├── auth.js
+│   │   │   ├── validation.js
+│   │   │   └── error-handler.js
+│   │   └── server.js
+│   └── config/
+│       ├── database.js
+│       └── security.js
+└── package.json
