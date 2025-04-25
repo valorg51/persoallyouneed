@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ConsultationPro - Trouvez votre expert entrepreneur idéal dans les domaines tech, e-commerce, digital et éducation">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ConsultationPro - Experts en entrepreneuriat</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/utils/variables.css">
+    <link rel="stylesheet" href="assets/css/utils/animations.css">
+    <link rel="stylesheet" href="assets/css/layout/header.css">
+    <link rel="stylesheet" href="assets/css/layout/main.css">
+    <link rel="stylesheet" href="assets/css/layout/footer.css">
+    <link rel="stylesheet" href="assets/css/components/search-form.css">
+    <link rel="stylesheet" href="assets/css/components/progress-bar.css">
+    <link rel="stylesheet" href="assets/css/components/suggestion-tags.css">
+    <link rel="stylesheet" href="assets/css/components/live-chat.css">
+    <link rel="stylesheet" href="assets/css/utils/responsive.css">
+    
+    <!-- Preconnect to improve performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://api.consultationpro.com">
+</head>
+<body>
+    <!-- Header Component -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="/">ConsultationPro</a>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="/experts">Nos experts</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/about">À propos</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="auth-buttons">
+                <a href="/login" class="btn btn-text">Connexion</a>
+                <a href="/register" class="btn btn-primary">Inscription</a>
+            </div>
+            <button class="mobile-menu-toggle" aria-label="Menu" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-container">
+                <h1>Boostez votre entrepreneuriat avec nos experts</h1>
+                <p>Des conseils personnalisés pour réussir dans la tech, l'e-commerce, le digital et la formation</p>
+            </div>
+        </section>
+
+        <!-- Search Form Component -->
+        <section class="search-section">
+            <div class="container">
+                <div class="search-container" id="search-form-container">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Experts -->
+        <section class="featured-experts">
+            <div class="container">
+                <h2 class="section-title">Nos experts en entrepreneuriat</h2>
+                <div class="experts-grid" id="experts-grid">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials">
+            <div class="container">
+                <h2 class="section-title">Ce que disent nos clients</h2>
+                <div class="testimonials-slider" id="testimonials-slider">
+                    <!-- Content will be dynamically loaded -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Component -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3>ConsultationPro</h3>
+                    <p>La plateforme qui connecte entrepreneurs et experts pour des consultations sur mesure.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Liens utiles</h4>
+                    <ul>
+                        <li><a href="/experts">Nos experts</a></li>
+                        <li><a href="/blog">Blog</a></li>
+                        <li><a href="/faq">FAQ</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Légal</h4>
+                    <ul>
+                        <li><a href="/terms">Conditions d'utilisation</a></li>
+                        <li><a href="/privacy">Politique de confidentialité</a></li>
+                        <li><a href="/cookies">Gestion des cookies</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Suivez-nous</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Facebook">Facebook</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 ConsultationPro. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Component -->
+    <div id="live-chat-container">
+        <!-- Content will be dynamically loaded -->
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/utils/EventBus.js"></script>
+    <script src="assets/js/utils/FormValidator.js"></script>
+    <script src="assets/js/services/ApiService.js"></script>
+    <script src="assets/js/services/ValidationService.js"></script>
+    <script src="assets/js/services/AuthService.js"></script>
+    <script src="assets/js/components/ProgressBar.js"></script>
+    <script src="assets/js/components/SearchForm.js"></script>
+    <script src="assets/js/components/SuggestionTags.js"></script>
+    <script src="assets/js/components/LiveChat.js"></script>
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://api.consultationpro.com;">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="same-origin">
+</body>
+</html>
